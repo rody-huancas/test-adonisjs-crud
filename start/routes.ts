@@ -1,12 +1,3 @@
-/*
-|--------------------------------------------------------------------------
-| Routes file
-|--------------------------------------------------------------------------
-|
-| The routes file is used for defining the HTTP routes.
-|
-*/
-
 import { middleware } from '#start/kernel'
 import router from '@adonisjs/core/services/router'
 import { controllers } from '#generated/controllers'
@@ -29,6 +20,12 @@ router
       .group(() => {
         router.get('profile', [controllers.Profile, 'show'])
         router.post('logout', [controllers.AccessTokens, 'destroy'])
+
+        /** Rutas de categorías */
+        router.resource('categories', controllers.Categories).apiOnly()
+
+        /** Rutas de productos con filtro y paginación */
+        router.resource('products', controllers.Products).apiOnly()
       })
       .prefix('account')
       .as('profile')

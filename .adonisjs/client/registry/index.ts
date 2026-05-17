@@ -30,6 +30,66 @@ const routes = {
     tokens: [{"old":"/api/v1/account/logout","type":0,"val":"api","end":""},{"old":"/api/v1/account/logout","type":0,"val":"v1","end":""},{"old":"/api/v1/account/logout","type":0,"val":"account","end":""},{"old":"/api/v1/account/logout","type":0,"val":"logout","end":""}],
     types: placeholder as Registry['profile.access_tokens.destroy']['types'],
   },
+  'profile.categories.index': {
+    methods: ["GET","HEAD"],
+    pattern: '/api/v1/account/categories',
+    tokens: [{"old":"/api/v1/account/categories","type":0,"val":"api","end":""},{"old":"/api/v1/account/categories","type":0,"val":"v1","end":""},{"old":"/api/v1/account/categories","type":0,"val":"account","end":""},{"old":"/api/v1/account/categories","type":0,"val":"categories","end":""}],
+    types: placeholder as Registry['profile.categories.index']['types'],
+  },
+  'profile.categories.store': {
+    methods: ["POST"],
+    pattern: '/api/v1/account/categories',
+    tokens: [{"old":"/api/v1/account/categories","type":0,"val":"api","end":""},{"old":"/api/v1/account/categories","type":0,"val":"v1","end":""},{"old":"/api/v1/account/categories","type":0,"val":"account","end":""},{"old":"/api/v1/account/categories","type":0,"val":"categories","end":""}],
+    types: placeholder as Registry['profile.categories.store']['types'],
+  },
+  'profile.categories.show': {
+    methods: ["GET","HEAD"],
+    pattern: '/api/v1/account/categories/:id',
+    tokens: [{"old":"/api/v1/account/categories/:id","type":0,"val":"api","end":""},{"old":"/api/v1/account/categories/:id","type":0,"val":"v1","end":""},{"old":"/api/v1/account/categories/:id","type":0,"val":"account","end":""},{"old":"/api/v1/account/categories/:id","type":0,"val":"categories","end":""},{"old":"/api/v1/account/categories/:id","type":1,"val":"id","end":""}],
+    types: placeholder as Registry['profile.categories.show']['types'],
+  },
+  'profile.categories.update': {
+    methods: ["PUT","PATCH"],
+    pattern: '/api/v1/account/categories/:id',
+    tokens: [{"old":"/api/v1/account/categories/:id","type":0,"val":"api","end":""},{"old":"/api/v1/account/categories/:id","type":0,"val":"v1","end":""},{"old":"/api/v1/account/categories/:id","type":0,"val":"account","end":""},{"old":"/api/v1/account/categories/:id","type":0,"val":"categories","end":""},{"old":"/api/v1/account/categories/:id","type":1,"val":"id","end":""}],
+    types: placeholder as Registry['profile.categories.update']['types'],
+  },
+  'profile.categories.destroy': {
+    methods: ["DELETE"],
+    pattern: '/api/v1/account/categories/:id',
+    tokens: [{"old":"/api/v1/account/categories/:id","type":0,"val":"api","end":""},{"old":"/api/v1/account/categories/:id","type":0,"val":"v1","end":""},{"old":"/api/v1/account/categories/:id","type":0,"val":"account","end":""},{"old":"/api/v1/account/categories/:id","type":0,"val":"categories","end":""},{"old":"/api/v1/account/categories/:id","type":1,"val":"id","end":""}],
+    types: placeholder as Registry['profile.categories.destroy']['types'],
+  },
+  'profile.products.index': {
+    methods: ["GET","HEAD"],
+    pattern: '/api/v1/account/products',
+    tokens: [{"old":"/api/v1/account/products","type":0,"val":"api","end":""},{"old":"/api/v1/account/products","type":0,"val":"v1","end":""},{"old":"/api/v1/account/products","type":0,"val":"account","end":""},{"old":"/api/v1/account/products","type":0,"val":"products","end":""}],
+    types: placeholder as Registry['profile.products.index']['types'],
+  },
+  'profile.products.store': {
+    methods: ["POST"],
+    pattern: '/api/v1/account/products',
+    tokens: [{"old":"/api/v1/account/products","type":0,"val":"api","end":""},{"old":"/api/v1/account/products","type":0,"val":"v1","end":""},{"old":"/api/v1/account/products","type":0,"val":"account","end":""},{"old":"/api/v1/account/products","type":0,"val":"products","end":""}],
+    types: placeholder as Registry['profile.products.store']['types'],
+  },
+  'profile.products.show': {
+    methods: ["GET","HEAD"],
+    pattern: '/api/v1/account/products/:id',
+    tokens: [{"old":"/api/v1/account/products/:id","type":0,"val":"api","end":""},{"old":"/api/v1/account/products/:id","type":0,"val":"v1","end":""},{"old":"/api/v1/account/products/:id","type":0,"val":"account","end":""},{"old":"/api/v1/account/products/:id","type":0,"val":"products","end":""},{"old":"/api/v1/account/products/:id","type":1,"val":"id","end":""}],
+    types: placeholder as Registry['profile.products.show']['types'],
+  },
+  'profile.products.update': {
+    methods: ["PUT","PATCH"],
+    pattern: '/api/v1/account/products/:id',
+    tokens: [{"old":"/api/v1/account/products/:id","type":0,"val":"api","end":""},{"old":"/api/v1/account/products/:id","type":0,"val":"v1","end":""},{"old":"/api/v1/account/products/:id","type":0,"val":"account","end":""},{"old":"/api/v1/account/products/:id","type":0,"val":"products","end":""},{"old":"/api/v1/account/products/:id","type":1,"val":"id","end":""}],
+    types: placeholder as Registry['profile.products.update']['types'],
+  },
+  'profile.products.destroy': {
+    methods: ["DELETE"],
+    pattern: '/api/v1/account/products/:id',
+    tokens: [{"old":"/api/v1/account/products/:id","type":0,"val":"api","end":""},{"old":"/api/v1/account/products/:id","type":0,"val":"v1","end":""},{"old":"/api/v1/account/products/:id","type":0,"val":"account","end":""},{"old":"/api/v1/account/products/:id","type":0,"val":"products","end":""},{"old":"/api/v1/account/products/:id","type":1,"val":"id","end":""}],
+    types: placeholder as Registry['profile.products.destroy']['types'],
+  },
 } as const satisfies Record<string, AdonisEndpoint>
 
 export { routes }
